@@ -5,10 +5,10 @@ public class Controller {
 	public Model m;
 	public Controller(Model m) {
 		this.m=m;
+		m.register(this);
 	}
 	public void register(View v) {
 		this.v=v;
-		m.register(this);
 	}
 	public ArrayList<Student> getData() {
 		return m.getData();
